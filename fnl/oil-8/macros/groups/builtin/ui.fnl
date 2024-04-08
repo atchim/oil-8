@@ -2,7 +2,7 @@
 
 { :groups
   #{; Background & Foreground
-    :Normal {:fg (color :eggshell) :bg (color :chinese-black)}
+    :Normal {:fg (color :bone) :bg (color :eerie-black)}
 
     ; Cursor
     :Cursor {:reverse true}
@@ -16,24 +16,25 @@
 
     ; Fold
     :FoldColumn {:link :LineNr}
-    :Folded {:fg (color :ecru) :bg (color :cyber-grape) :bold true}
+    :Folded {:fg (color :burnished-brown) :bg (color :cyber-grape) :bold true}
 
     ; Line Number & Sign Column
-    :CursorLineNr {:fg (color :ecru) :bold true}
-    :LineNr {:fg (color :mountbatten-pink)}
+    :CursorLineNr {:fg (color :burnished-brown) :bold true}
+    :LineNr {:fg (color :antique-fuchsia)}
     :SignColumn {:link :LineNr}
 
     ; Menu
-    :Pmenu {:fg (color :ecru) :bg (color :dark-gunmetal)}
+    :Pmenu {:fg (color :burnished-brown) :bg (color :dark-gunmetal)}
     :PmenuSBar {:bg (color :space-cadet)}
     :PmenuSel {:bg (color :cyber-grape)}
     :PmenuThumb {:link :PmenuSel}
-    :WildMenu {:fg (color :desert-sand) :bold true :bg (color :cyber-grape)}
+    :WildMenu {:fg (color :ecru) :bold true :bg (color :cyber-grape)}
 
     ; Status & Tab Lines
-    :StatusLine {:fg (color :ecru) :bg (color :space-cadet) :bold true}
+    :StatusLine
+    {:fg (color :burnished-brown) :bg (color :space-cadet) :bold true}
     :StatusLineNC
-    {:fg (color :mountbatten-pink) :bg (color :dark-gunmetal) :bold true}
+    {:fg (color :antique-fuchsia) :bg (color :dark-gunmetal) :bold true}
     :TabLineSel {:link :StatusLine}
 
     ; Window

@@ -2,6 +2,6 @@
 
 { :groups
   #{:SpellBad {:sp (color :dirty-brown) :undercurl true :italic true}
-    :SpellCap {:sp (color :steel-pink) :undercurl true :italic true}
+    :SpellCap {:sp (color :byzantine) :undercurl true :italic true}
     :SpellLocal {:sp (color :acid-green) :undercurl true :italic true}
     :SpellRare {:sp (color :dirty-brown) :undercurl true :italic true}}}

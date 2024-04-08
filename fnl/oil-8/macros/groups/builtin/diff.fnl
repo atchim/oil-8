@@ -13,7 +13,7 @@
     :DiffText {:bg (color :bronze-yellow) :bold true}
 
     ; File
-    :diffAdded {:fg (color :pastel-green)}
+    :diffAdded {:fg (color :mantis)}
     :diffChanged {:fg (color :big-foot-feet)}
     :diffFile {:link :Comment}
     :diffLine {:fg (color :light-deep-pink)}

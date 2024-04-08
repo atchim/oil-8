@@ -2,10 +2,10 @@
 
 { :groups
   #{; Git
-    :NeoTreeGitAdded {:fg (color :pastel-green)}
+    :NeoTreeGitAdded {:fg (color :mantis)}
     :NeoTreeGitConflict {:fg (color :brink-pink) :bold true}
     :NeoTreeGitDeleted {:fg (color :english-red)}
-    :NeoTreeGitModified {:fg (color :corn)}
+    :NeoTreeGitModified {:fg (color :chinese-green)}
     :NeoTreeGitUntracked {:fg (color :big-foot-feet)}
 
     ; Labels
@@ -14,8 +14,7 @@
     :NeoTreeFileStatsHeader {:fg (color :violets-are-blue) :bold true}
     :NeoTreeMessage {:link :NeoTreeDotfile}
     :NeoTreeRootName {:fg (color :light-deep-pink) :bold true}
-    :NeoTreeTitleBar
-    {:fg (color :eggshell) :bg (color :cyber-grape) :bold true}
+    :NeoTreeTitleBar {:fg (color :bone) :bg (color :cyber-grape) :bold true}
 
     ; UI
     :NeoTreeCursorLine {:bg (color :space-cadet)}
