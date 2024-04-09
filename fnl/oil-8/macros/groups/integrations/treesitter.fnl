@@ -10,6 +10,11 @@
     "@constant.builtin" {:link :Boolean}
     "@constant.macro" {:fg (color :tulip)}
 
+    ; String
+    "@string.documentation" {:fg (color :medium-aquamarine)}
+    "@string.regex" {:fg (color :medium-aquamarine)}
+    "@string.regexp" {:link "@string.regex"}
+
     ; Tag
     "@tag" {:link :Type}
     "@tag.attribute" {:link "@variable.member"}

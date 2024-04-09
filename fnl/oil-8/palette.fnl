@@ -17,6 +17,7 @@
   :bronze_yellow       :#606c09
   :acid_green          :#bbbd28
   :chinese_green       :#d4e05c
+  :inchworm            :#bcec6a
   :kombu_green         :#31452b
   :green_ryb           :#4eb332
   :mantis              :#72db5e
@@ -25,12 +26,15 @@
   :jungle_green        :#2d9f84
   :turquoise           :#58e9ca
   :middle_blue         :#84cfdd
+  :ateneo_blue         :#024c67
   :steel_blue          :#367ba6
   :blue_jeans          :#54b7e8
   :baby_blue_eyes      :#a4b6fe
   :pixie_powder        :#3e2187
+  :blue_pigment        :#413aa1
   :violets_are_blue    :#966ef2
   :pale_violet         :#c0a0ff
+  :japanese_violet     :#592a5f
   :byzantine           :#b22ab7
   :light_deep_pink     :#e557cd
   :persian_pink        :#fc83c5}

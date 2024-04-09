@@ -7,6 +7,7 @@
     :Constant {:fg (color :big-foot-feet)}
     :Delimiter {:fg (color :jungle-green) :bold true}
     :Error {:fg (color :brink-pink) :bold true :reverse true}
+    :Float {:fg (color :inchworm)}
     :Function {:link :Identifier}
     :Identifier {:fg (color :blue-jeans)}
     :Number {:fg (color :chinese-green)}
