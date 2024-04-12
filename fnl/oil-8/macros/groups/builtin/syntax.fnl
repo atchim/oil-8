@@ -10,12 +10,13 @@
     :Float {:fg (color :inchworm)}
     :Function {:link :Identifier}
     :Identifier {:fg (color :blue-jeans)}
+    :Label {:fg (color :mauve)}
     :Number {:fg (color :chinese-green)}
     :Operator {:link :Special}
     :Preproc {:fg (color :brink-pink)}
     :Special {:fg (color :turquoise)}
     :Statement {:fg (color :light-deep-pink)}
     :String {:fg (color :mantis)}
-    :Tag {:fg (color :pale-violet)}
+    :Tag {:fg (color :mauve)}
     :Todo {:fg (color :violets-are-blue) :bold true :reverse true}
     :Type {:fg (color :violets-are-blue)}}}

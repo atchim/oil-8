@@ -1,7 +1,119 @@
 # 🛢️ Oil-8
 
-> A [GUI]-only dark color scheme for [Neovim] based on the
-> [Oil 6 palette][oil-6].
+Oil 8 is a [GUI][gui]-only dark color scheme for [Neovim][nvim] that was mainly
+based on the [Oil 6 color palette][oil-6]. Other inspirations includes
+[Sopa de Mamaco][sopa.nvim], [Catppuccin][catppuccin.nvim] and
+[Bubblegum][bubblegum] color schemes.
+
+## ✨ Features
+
+- Dark theme with base colors based on the [Oil 6 color palette][oil-6].
+- Colors distributed throughout the spectrum.
+- Similar colors have similar meanings.
+- [Integration][#-integration] with [nvim-treesitter] and
+  [Neo-tree][neo-tree.nvim].
+
+## 🚀 Usage
+
+To load the color scheme with its default configuration, use the traditional
+[`:colorscheme`][colorscheme] command, as shown below.
+
+```vim
+:colorscheme oil-8
+```
+
+To load the color scheme with custom configuration, use the
+[`setup` function][#oil-8setupconfig], as exemplified in the following Lua code
+snippet.
+
+```lua
+require'oil-8'.setup{
+  -- Terminal color support is disabled by default. Set it to `true` to
+  -- enable.
+  terminal_colors = false,
+
+  -- By default, most plugins have integration enabled. To disable all plugin
+  -- integration, set the `integration` field to `false`.
+  integration = {
+    neo_tree = true, -- Integration for Neo-tree.
+    treesitter = true, -- Integration for nvim-treesitter.
+  }
+}
+```
+
+## 🧩 Integration
+
+Oil 8 provides seamlessly theme integration for other plugins of the Neovim's
+ecosystem. The integration is configured via the
+[`integration` field][#integration] of the configuration table that may be
+passed as argument for the [`setup` function][#oil-8setupconfig].
+
+The supported plugins are listed below.
+
+- [Neo-tree][neo-tree.nvim]
+- [nvim-treesitter]
+
+## 📖 API
+
+The following subsections cover each module/submodule composing the Lua API of
+Oil 8.
+
+### `oil-8`
+
+Table serving as the main module for this plugin.
+
+#### `oil-8.setup(?config)`
+
+Function for loading the color scheme according to optional `?config` or
+their defaults. If no `?config` would be passed to this function, it's
+recommended to use `:colorscheme oil-8` instead.
+
+The documentation for `?config` can be found [here][#-configuration].
+
+### `oil-8.palette`
+
+Table serving as the module containing all the colors used by this color
+scheme. Each key stands for the color name, with its corresponding value being
+a string representing a hex triplet for the color.
+
+The comprehensive list of the colors can be found [here][#-palette].
+
+## 🔧 Configuration
+
+Oil 8 is configured via the configuration table passed as argument to the
+[`setup` function][#oil-8setupconfig]. The fields of that table are listed and
+explained below.
+
+### `terminal_colors`
+
+Boolean controlling whether Oil 8 should set
+[terminal color variables][terminal-config]. By default, it's set to `false`.
+
+### `integration`
+
+Key-value table controlling which (and how) plugins should be integrated by Oil
+8. Each key represents the plugin name in snake case, with the corresponding
+value typically being a boolean enabling/disabling the integration for that
+plugin.
+
+Setting the `integration` field to `false` will completely disable plugin
+integration functionality.
+
+In most cases, plugin integration consists of setting highlight groups specific
+to the plugin's functionality.
+
+The keys of the `integration` table (i.e., the plugins supported by Oil 8), and
+their corresponding values are listed below.
+
+#### `neo_tree`
+
+Boolean controlling whether to enable integration for
+[Neo-tree][neo-tree.nvim]. By default, this plugin is integrated by Oil 8.
+
+#### `treesitter`
+
+Boolean controlling whether to enable integration for [nvim-treesitter]. By
+default, this plugin is integrated by Oil 8.
 
 ## 🎨 Palette
 
@@ -42,12 +154,19 @@
 | `pixie_powder`        | `#3e2187` | `257 60 32` | `23  39 -52` |
 | `blue_pigment`        | `#413aa1` | `244 47 42` | `31  33 -55` |
 | `violets_are_blue`    | `#966ef2` | `258 83 69` | `56  44 -61` |
-| `pale-violet`         | `#c1a2fd` | `260 96 81` | `72  29 -41` |
+| `mauve`               | `#dd9ffe` | `278 98 80` | `74  39 -38` |
 | `japanese_violet`     | `#592a5f` | `293 38 26` | `25  30 -22` |
 | `byzantine`           | `#b22ab7` | `297 62 44` | `45  66 -45` |
 | `light_deep_pink`     | `#e557cd` | `310 73 61` | `59  68 -33` |
 | `light_deep_pink`     | `#fc83c5` | `327 95 75` | `70  53 -13` |
 
-[GUI]: https://neovim.io/doc/user/gui.html#gui
-[Neovim]: https://neovim.io
+[bubblegum]: https://github.com/baskerville/bubblegum
+[catppuccin.nvim]: https://github.com/catppuccin/nvim
+[colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
+[gui]: https://neovim.io/doc/user/gui.html#gui
+[neo-tree.nvim]: https://github.com/nvim-neo-tree/neo-tree.nvim
+[nvim]: https://neovim.io
+[nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [oil-6]: https://lospec.com/palette-list/oil-6
+[sopa.nvim]: https://github.com/atchim/sopa.nvim
+[terminal-config]: https://neovim.io/doc/user/nvim_terminal_emulator.html#terminal-config

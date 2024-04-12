@@ -29,4 +29,4 @@
     ; Misc
     "@constructor" {:link "@punctuation"}
     "@keyword.export" {:fg (color :persian-pink)}
-    "@type.builtin" {:fg (color :pale-violet)}}}
+    "@type.builtin" {:fg (color :mauve)}}}

@@ -33,7 +33,7 @@
   :pixie_powder        :#3e2187
   :blue_pigment        :#413aa1
   :violets_are_blue    :#966ef2
-  :pale_violet         :#c0a0ff
+  :mauve               :#dd9ffe
   :japanese_violet     :#592a5f
   :byzantine           :#b22ab7
   :light_deep_pink     :#e557cd
