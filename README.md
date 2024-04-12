@@ -10,7 +10,7 @@ based on the [Oil 6 color palette][oil-6]. Other inspirations includes
 - Dark theme with base colors based on the [Oil 6 color palette][oil-6].
 - Colors distributed throughout the spectrum.
 - Similar colors have similar meanings.
-- [Integration][#-integration] with [nvim-treesitter] and
+- [Integration](#-integration) with [nvim-treesitter] and
   [Neo-tree][neo-tree.nvim].
 
 ## 🚀 Usage
@@ -23,7 +23,7 @@ To load the color scheme with its default configuration, use the traditional
 ```
 
 To load the color scheme with custom configuration, use the
-[`setup` function][#oil-8setupconfig], as exemplified in the following Lua code
+[`setup` function](#oil-8setupconfig), as exemplified in the following Lua code
 snippet.
 
 ```lua
@@ -45,8 +45,8 @@ require'oil-8'.setup{
 
 Oil 8 provides seamlessly theme integration for other plugins of the Neovim's
 ecosystem. The integration is configured via the
-[`integration` field][#integration] of the configuration table that may be
-passed as argument for the [`setup` function][#oil-8setupconfig].
+[`integration` field](#integration) of the configuration table that may be
+passed as argument for the [`setup` function](#oil-8setupconfig).
 
 The supported plugins are listed below.
 
@@ -68,7 +68,7 @@ Function for loading the color scheme according to optional `?config` or
 their defaults. If no `?config` would be passed to this function, it's
 recommended to use `:colorscheme oil-8` instead.
 
-The documentation for `?config` can be found [here][#-configuration].
+The documentation for `?config` can be found [here](#-configuration).
 
 ### `oil-8.palette`
 
@@ -76,12 +76,12 @@ Table serving as the module containing all the colors used by this color
 scheme. Each key stands for the color name, with its corresponding value being
 a string representing a hex triplet for the color.
 
-The comprehensive list of the colors can be found [here][#-palette].
+The comprehensive list of the colors can be found [here](#-palette).
 
 ## 🔧 Configuration
 
 Oil 8 is configured via the configuration table passed as argument to the
-[`setup` function][#oil-8setupconfig]. The fields of that table are listed and
+[`setup` function](#oil-8setupconfig). The fields of that table are listed and
 explained below.
 
 ### `terminal_colors`
