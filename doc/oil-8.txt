@@ -8,6 +8,11 @@ Oil 6 color palette. Other color schemes inspirations includes Sopa de Mamaco,
 Catppuccin and Bubblegum (see |oil-8-see-also|).
 
 ===============================================================================
+REQUIREMENTS                                               *oil-8-requirements*
+
+Oil 8 only requires the 'background' option set to `dark`.
+
+===============================================================================
 FEATURES                                                       *oil-8-features*
 
 - Dark theme with base colors based on the Oil 6 color palette.

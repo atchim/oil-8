@@ -5,6 +5,10 @@ based on the [Oil 6 color palette][oil-6]. Other color schemes inspirations
 includes [Sopa de Mamaco][sopa.nvim], [Catppuccin][catppuccin.nvim] and
 [Bubblegum][bubblegum].
 
+## ⚠️ Requirements
+
+Oil 8 only requires the [`background`][background] option set to `dark`.
+
 ## ✨ Features
 
 - Dark theme with base colors based on the [Oil 6 color palette][oil-6].
@@ -160,6 +164,7 @@ default, this plugin is integrated by Oil 8.
 | `light_deep_pink`     | `#e557cd` | `310 73 61` | `59  68 -33` |
 | `light_deep_pink`     | `#fc83c5` | `327 95 75` | `70  53 -13` |
 
+[background]: https://neovim.io/doc/user/options.html#'background'
 [bubblegum]: https://github.com/baskerville/bubblegum
 [catppuccin.nvim]: https://github.com/catppuccin/nvim
 [colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
