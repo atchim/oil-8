@@ -55,6 +55,8 @@ passed as argument for the [`setup` function](#oil-8setupconfig).
 The supported plugins are listed below.
 
 - [Indent Blankline][indent-blankline.nvim]
+- [Mini][mini.nvim]
+  - [Indentscope][mini.indentscope]
 - [Neo-tree][neo-tree.nvim]
 - [nvim-treesitter]
 
@@ -115,6 +117,18 @@ their corresponding values are listed below.
 Boolean controlling whether to enable integration for
 [Indent Blankline][indent-blankline.nvim]. By default, this plugin is
 integrated by Oil 8.
+
+#### `mini`
+
+Key-value table controlling [Mini][mini.nvim] modules that should be integrated
+by Oil 8. Setting the `integration.mini` field to `false` will completely
+disable plugin integration functionality for Mini.
+
+##### `indentscope`
+
+Boolean controlling whether to enable integration for
+[Indentscope][mini.indentscope]. By default, this plugin is integrated by Oil
+8.
 
 #### `neo_tree`
 
@@ -177,6 +191,8 @@ default, this plugin is integrated by Oil 8.
 [colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
 [gui]: https://neovim.io/doc/user/gui.html#gui
 [indent-blankline.nvim]: https://github.com/lukas-reineke/indent-blankline.nvim
+[mini.indentscope]: https://github.com/echasnovski/mini.indentscope
+[mini.nvim]: https://github.com/echasnovski/mini.nvim
 [neo-tree.nvim]: https://github.com/nvim-neo-tree/neo-tree.nvim
 [nvim]: https://neovim.io
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter

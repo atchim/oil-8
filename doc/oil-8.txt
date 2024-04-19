@@ -55,6 +55,8 @@ argument for the `setup` function (|oil-8.setup()|).
 The supported plugins are listed below.
 
 - Indent Blankline (|indent-blankline.txt|)
+- Mini (|mini.txt|)
+  - Indentscope (|mini.indentscope|)
 - Neo-tree (|neo-tree.txt|)
 - nvim-treesitter (|nvim-treesitter|)
 
@@ -115,7 +117,18 @@ explained below.
                                     *oil-8-config.integration.indent_blankline*
   `indent_blankline`
     Boolean controlling whether to enable integration for Indent Blankline
-    (indent-blankline.txt). By default, this plugin is integrated by Oil 8.
+    (|indent-blankline.txt|). By default, this plugin is integrated by Oil 8.
+
+                                                *oil-8-config.integration.mini*
+  `mini`
+    Key-value table controlling Mini (|mini.nvim|) modules that should be
+    integrated by Oil 8. Setting the `integration.mini` field to `false` will
+    completely disable plugin integration functionality for Mini.
+
+                                    *oil-8-config.integration.mini.indentscope*
+    `indentscope`
+      Boolean controlling whether to enable integration for Indentscope
+      (|mini.indentscope|). By default, this plugin is integrated by Oil 8.
 
                                             *oil-8-config.integration.neo_tree*
   `neo_tree`
@@ -176,12 +189,15 @@ PALETTE                                                         *oil-8-palette*
 ===============================================================================
 SEE ALSO                                                       *oil-8-see-also*
 
-Bubblegum:       https://github.com/baskerville/bubblegum
-Catppuccin:      https://github.com/catppuccin/nvim
-Neo-tree:        https://github.com/nvim-neo-tree/neo-tree.nvim
-nvim-treesitter: https://github.com/nvim-treesitter/nvim-treesitter
-Oil 6:           https://lospec.com/palette-list/oil-6
-Sopa de Mamaco:  https://github.com/atchim/sopa.nvim
+Bubblegum:        https://github.com/baskerville/bubblegum
+Catppuccin:       https://github.com/catppuccin/nvim
+Indent Blankline: https://github.com/lukas-reineke/indent-blankline.nvim
+Mini:             https://github.com/echasnovski/mini.nvim
+Mini Indentscope: https://github.com/echasnovski/mini.indentscope
+Neo-tree:         https://github.com/nvim-neo-tree/neo-tree.nvim
+nvim-treesitter:  https://github.com/nvim-treesitter/nvim-treesitter
+Oil 6:            https://lospec.com/palette-list/oil-6
+Sopa de Mamaco:   https://github.com/atchim/sopa.nvim
 
 ===============================================================================
 vim:ft=help:norl:nospell:tw=79

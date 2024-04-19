@@ -1,4 +1,4 @@
-local default_config = {integration = {indent_blankline = true, neo_tree = true, treesitter = true}, terminal_colors = false}
+local default_config = {integration = {indent_blankline = true, mini = {indentscope = true}, neo_tree = true, treesitter = true}, terminal_colors = false}
 local _local_1_ = vim
 local _local_2_ = _local_1_["api"]
 local hi = _local_2_["nvim_set_hl"]
@@ -36,6 +36,15 @@ local function setup(_3fconfig)
     if config.integration.indent_blankline then
       for name_2_auto, args_3_auto in pairs({IblIndent = {fg = "#292449"}, IblScope = {fg = "#5f4c73"}}) do
         hi(0, name_2_auto, args_3_auto)
+      end
+    else
+    end
+    if config.integration.mini then
+      if config.integration.mini.indentscope then
+        for name_2_auto, args_3_auto in pairs({MiniIndentscopeSymbol = {fg = "#5f4c73"}}) do
+          hi(0, name_2_auto, args_3_auto)
+        end
+      else
       end
     else
     end
