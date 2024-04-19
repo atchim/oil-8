@@ -2,16 +2,16 @@ local default_config = {integration = {neo_tree = true, treesitter = true}, term
 local _local_1_ = vim
 local _local_2_ = _local_1_["api"]
 local hi = _local_2_["nvim_set_hl"]
-local cmd = _local_1_["cmd"]
 local fn_2a = _local_1_["fn"]
 local g = _local_1_["g"]
-local o = _local_1_["opt"]
+local opt = _local_1_["opt"]
 local tbl_deep_extend = _local_1_["tbl_deep_extend"]
 local function setup(_3fconfig)
-  assert((o.termguicolors):get(), "oil-8: 'termguicolors' not set")
-  cmd("hi clear")
+  assert(("dark" == (opt.background):get()), "oil-8: 'dark' `background` not set")
+  assert((opt.termguicolors):get(), "oil-8: 'termguicolors' not set")
+  vim.cmd("hi clear")
   if fn_2a.exists("syntax") then
-    cmd("syntax reset")
+    vim.cmd("syntax reset")
   else
   end
   g.colors_name = "oil-8"

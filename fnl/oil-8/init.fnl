@@ -9,18 +9,14 @@
   {:terminal_colors false :integration {:neo_tree true :treesitter true}})
 
 (local
-  { :api {:nvim_set_hl hi}
-    : cmd
-    :fn fn*
-    : g
-    :opt o
-    :tbl_deep_extend tbl-deep-extend}
+  {:api {:nvim_set_hl hi} :fn fn* : g : opt :tbl_deep_extend tbl-deep-extend}
   vim)
 
 (fn setup [?config]
-  (assert (o.termguicolors:get) "oil-8: 'termguicolors' not set")
-  (cmd "hi clear")
-  (when (fn*.exists :syntax) (cmd "syntax reset"))
+  (assert (= :dark (opt.background:get)) "oil-8: 'dark' `background` not set")
+  (assert (opt.termguicolors:get) "oil-8: 'termguicolors' not set")
+  (vim.cmd "hi clear")
+  (when (fn*.exists :syntax) (vim.cmd "syntax reset"))
   (set g.colors_name :oil-8)
 
   (macro hi-groups [groups]
