@@ -1,4 +1,4 @@
-local default_config = {integration = {neo_tree = true, treesitter = true}, terminal_colors = false}
+local default_config = {integration = {indent_blankline = true, neo_tree = true, treesitter = true}, terminal_colors = false}
 local _local_1_ = vim
 local _local_2_ = _local_1_["api"]
 local hi = _local_2_["nvim_set_hl"]
@@ -33,6 +33,12 @@ local function setup(_3fconfig)
   else
   end
   if config.integration then
+    if config.integration.indent_blankline then
+      for name_2_auto, args_3_auto in pairs({IblIndent = {fg = "#292449"}, IblScope = {fg = "#5f4c73"}}) do
+        hi(0, name_2_auto, args_3_auto)
+      end
+    else
+    end
     if config.integration.neo_tree then
       for name_2_auto, args_3_auto in pairs({NeoTreeCursorLine = {bg = "#292449"}, NeoTreeDimText = {link = "NonText"}, NeoTreeDotfile = {fg = "#5f4c73"}, NeoTreeFileStats = {link = "NeoTreeDotfile"}, NeoTreeFileStatsHeader = {bold = true, fg = "#966ef2"}, NeoTreeGitAdded = {fg = "#72db5e"}, NeoTreeGitConflict = {bold = true, fg = "#f35e7c"}, NeoTreeGitDeleted = {fg = "#aa3c55"}, NeoTreeGitModified = {fg = "#d4e05c"}, NeoTreeGitUntracked = {fg = "#f38f5e"}, NeoTreeMessage = {link = "NeoTreeDotfile"}, NeoTreeNormal = {bg = "#1c1b34"}, NeoTreeNormalNC = {link = "NeoTreeNormal"}, NeoTreeRootName = {bold = true, fg = "#e557cd"}, NeoTreeTitleBar = {bg = "#5f4c73", bold = true, fg = "#e1e0c4"}, NeoTreeWinSeparator = {bg = "#1c1b34", fg = "#5f4c73"}}) do
         hi(0, name_2_auto, args_3_auto)

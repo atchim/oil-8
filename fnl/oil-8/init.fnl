@@ -1,12 +1,14 @@
 (import-macros
   {:groups builtin-groups} :fnl.oil-8.macros.groups.builtin
   {:variables terminal-variables} :fnl.oil-8.macros.groups.builtin.terminal
+  {:groups ibl-groups} :fnl.oil-8.macros.groups.integration.indent-blankline
   {:groups neo-tree-groups} :fnl.oil-8.macros.groups.integration.neo-tree
   {:groups treesitter-groups} :fnl.oil-8.macros.groups.integration.treesitter
   {: or-default} :soupmacs.soupmacs)
 
 (local default-config
-  {:terminal_colors false :integration {:neo_tree true :treesitter true}})
+  { :terminal_colors false
+    :integration {:indent_blankline true :neo_tree true :treesitter true}})
 
 (local
   {:api {:nvim_set_hl hi} :fn fn* : g : opt :tbl_deep_extend tbl-deep-extend}
@@ -28,6 +30,7 @@
     (when config.terminal_colors
       (each [name color (pairs (terminal-variables))] (tset g name color)))
     (when config.integration
+      (when config.integration.indent_blankline (hi-groups (ibl-groups)))
       (when config.integration.neo_tree (hi-groups (neo-tree-groups)))
       (when config.integration.treesitter (hi-groups (treesitter-groups))))))
 

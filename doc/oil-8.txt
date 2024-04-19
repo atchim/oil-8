@@ -54,6 +54,7 @@ argument for the `setup` function (|oil-8.setup()|).
 
 The supported plugins are listed below.
 
+- Indent Blankline (|indent-blankline.txt|)
 - Neo-tree (|neo-tree.txt|)
 - nvim-treesitter (|nvim-treesitter|)
 
@@ -110,6 +111,11 @@ explained below.
 
   The keys of the `integration` table (i.e., the plugins supported by Oil 8),
   and their corresponding values are listed below.
+
+                                    *oil-8-config.integration.indent_blankline*
+  `indent_blankline`
+    Boolean controlling whether to enable integration for Indent Blankline
+    (indent-blankline.txt). By default, this plugin is integrated by Oil 8.
 
                                             *oil-8-config.integration.neo_tree*
   `neo_tree`

@@ -54,6 +54,7 @@ passed as argument for the [`setup` function](#oil-8setupconfig).
 
 The supported plugins are listed below.
 
+- [Indent Blankline][indent-blankline.nvim]
 - [Neo-tree][neo-tree.nvim]
 - [nvim-treesitter]
 
@@ -108,6 +109,12 @@ to the plugin's functionality.
 
 The keys of the `integration` table (i.e., the plugins supported by Oil 8), and
 their corresponding values are listed below.
+
+#### `indent_blankline`
+
+Boolean controlling whether to enable integration for
+[Indent Blankline][indent-blankline.nvim]. By default, this plugin is
+integrated by Oil 8.
 
 #### `neo_tree`
 
@@ -169,6 +176,7 @@ default, this plugin is integrated by Oil 8.
 [catppuccin.nvim]: https://github.com/catppuccin/nvim
 [colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
 [gui]: https://neovim.io/doc/user/gui.html#gui
+[indent-blankline.nvim]: https://github.com/lukas-reineke/indent-blankline.nvim
 [neo-tree.nvim]: https://github.com/nvim-neo-tree/neo-tree.nvim
 [nvim]: https://neovim.io
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
