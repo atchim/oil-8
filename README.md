@@ -1,4 +1,4 @@
-# 🛢️ Oil-8
+# 🛢️ Oil 8
 
 Oil 8 is a [GUI][gui]-only dark color scheme for [Neovim][nvim] that was mainly
 based on the [Oil 6 color palette][oil-6]. Other color schemes inspirations
