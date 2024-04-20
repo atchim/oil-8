@@ -1,4 +1,4 @@
-local default_config = {integration = {indent_blankline = true, leap = true, mini = {indentscope = true}, neo_tree = true, treesitter = true}, terminal_colors = false}
+local default_config = {integration = {illuminate = true, indent_blankline = true, leap = true, mini = {indentscope = true}, neo_tree = true, treesitter = true}, terminal_colors = false}
 local _local_1_ = vim
 local _local_2_ = _local_1_["api"]
 local hi = _local_2_["nvim_set_hl"]
@@ -33,6 +33,12 @@ local function setup(_3fconfig)
   else
   end
   if config.integration then
+    if config.integration.illuminate then
+      for name_2_auto, args_3_auto in pairs({IlluminatedWordRead = {bg = "#3e2187"}, IlluminatedWordText = {bg = "#024c67"}, IlluminatedWordWrite = {bg = "#592a5f"}}) do
+        hi(0, name_2_auto, args_3_auto)
+      end
+    else
+    end
     if config.integration.indent_blankline then
       for name_2_auto, args_3_auto in pairs({IblIndent = {fg = "#292449"}, IblScope = {fg = "#5f4c73"}}) do
         hi(0, name_2_auto, args_3_auto)

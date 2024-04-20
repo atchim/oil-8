@@ -54,6 +54,7 @@ argument for the `setup` function (|oil-8.setup()|).
 
 The supported plugins are listed below.
 
+- Illuminate (|illuminate.txt|)
 - Indent Blankline (|indent-blankline.txt|)
 - Leap (|leap.txt|)
 - Mini (|mini.txt|)
@@ -113,6 +114,10 @@ explained below.
 
   The keys of the `integration` table (i.e., the plugins supported by Oil 8),
   and their corresponding values are listed below.
+
+  `illuminate`                            *oil-8-config.integration.illuminate*
+    Boolean controlling whether to enable integration for Illuminate
+    (|illuminate.txt|). By default, this plugin is integrated by Oil 8.
 
   `indent_blankline`                *oil-8-config.integration.indent_blankline*
     Boolean controlling whether to enable integration for Indent Blankline
@@ -190,6 +195,7 @@ SEE ALSO                                                       *oil-8-see-also*
 
 Bubblegum:        https://github.com/baskerville/bubblegum
 Catppuccin:       https://github.com/catppuccin/nvim
+Illuminate:       https://github.com/RRethy/vim-illuminate
 Indent Blankline: https://github.com/lukas-reineke/indent-blankline.nvim
 Leap:             https://github.com/ggandor/leap.nvim
 Mini:             https://github.com/echasnovski/mini.nvim

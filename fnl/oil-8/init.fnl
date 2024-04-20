@@ -1,6 +1,7 @@
 (import-macros
   {:groups builtin-groups} :fnl.oil-8.macros.groups.builtin
   {:variables terminal-variables} :fnl.oil-8.macros.groups.builtin.terminal
+  {:groups illuminate-groups} :fnl.oil-8.macros.groups.integration.illuminate
   {:groups ibl-groups} :fnl.oil-8.macros.groups.integration.indent-blankline
   {:groups leap-groups} :fnl.oil-8.macros.groups.integration.leap
   {:groups mini-indentscope-groups}
@@ -12,7 +13,8 @@
 (local default-config
   { :terminal_colors false
     :integration
-    { :indent_blankline true
+    { :illuminate true
+      :indent_blankline true
       :leap true
       :mini {:indentscope true}
       :neo_tree true
@@ -38,6 +40,7 @@
     (when config.terminal_colors
       (each [name color (pairs (terminal-variables))] (tset g name color)))
     (when config.integration
+      (when config.integration.illuminate (hi-groups (illuminate-groups)))
       (when config.integration.indent_blankline (hi-groups (ibl-groups)))
       (when config.integration.leap (hi-groups (leap-groups)))
       (when config.integration.mini

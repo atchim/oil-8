@@ -53,6 +53,7 @@ passed as argument for the [`setup` function](#oil-8setupconfig).
 
 The supported plugins are listed below.
 
+- [Illuminate][vim-illuminate]
 - [Indent Blankline][indent-blankline.nvim]
 - [Leap][leap.nvim]
 - [Mini][mini.nvim]
@@ -111,6 +112,11 @@ to the plugin's functionality.
 
 The keys of the `integration` table (i.e., the plugins supported by Oil 8), and
 their corresponding values are listed below.
+
+#### `illuminate`
+
+Boolean controlling whether to enable integration for
+[Illuminate][vim-illuminate]. By default, this plugin is integrated by Oil 8.
 
 #### `indent_blankline`
 
@@ -205,3 +211,4 @@ default, this plugin is integrated by Oil 8.
 [oil-6]: https://lospec.com/palette-list/oil-6
 [sopa.nvim]: https://github.com/atchim/sopa.nvim
 [terminal-config]: https://neovim.io/doc/user/nvim_terminal_emulator.html#terminal-config
+[vim-illuminate]: https://github.com/RRethy/vim-illuminate
