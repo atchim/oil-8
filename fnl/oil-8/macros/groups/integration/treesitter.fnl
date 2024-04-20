@@ -14,6 +14,7 @@
     "@string.documentation" {:fg (color :medium-aquamarine)}
     "@string.regex" {:fg (color :medium-aquamarine)}
     "@string.regexp" {:link "@string.regex"}
+    "@string.special.url" {:fg (color :turquoise) :underline true}
 
     ; Tag
     "@tag" {:link :Type}
