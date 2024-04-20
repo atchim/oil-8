@@ -16,7 +16,7 @@
 
     ; Fold
     :FoldColumn {:link :LineNr}
-    :Folded {:fg (color :burnished-brown) :bg (color :cyber-grape) :bold true}
+    :Folded {:fg (color :antique_fuchsia) :bg (color :space-cadet) :bold true}
 
     ; Line Number & Sign Column
     :CursorLineNr {:fg (color :burnished-brown) :bold true}
