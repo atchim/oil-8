@@ -117,6 +117,10 @@ explained below.
     Boolean controlling whether to enable integration for Indent Blankline
     (|indent-blankline.txt|). By default, this plugin is integrated by Oil 8.
 
+  `leap`                                        *oil-8-config.integration.leap*
+    Boolean controlling whether to enable integration for Leap (|leap.txt|). By
+    default, this plugin is integrated by Oil 8.
+
   `mini`                                        *oil-8-config.integration.mini*
     Key-value table controlling Mini (|mini.nvim|) modules that should be
     integrated by Oil 8. Setting the `integration.mini` field to `false` will
@@ -186,6 +190,7 @@ SEE ALSO                                                       *oil-8-see-also*
 Bubblegum:        https://github.com/baskerville/bubblegum
 Catppuccin:       https://github.com/catppuccin/nvim
 Indent Blankline: https://github.com/lukas-reineke/indent-blankline.nvim
+Leap:             https://github.com/ggandor/leap.nvim
 Mini:             https://github.com/echasnovski/mini.nvim
 Mini Indentscope: https://github.com/echasnovski/mini.indentscope
 Neo-tree:         https://github.com/nvim-neo-tree/neo-tree.nvim

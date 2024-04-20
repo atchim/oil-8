@@ -118,6 +118,11 @@ Boolean controlling whether to enable integration for
 [Indent Blankline][indent-blankline.nvim]. By default, this plugin is
 integrated by Oil 8.
 
+#### `leap`
+
+Boolean controlling whether to enable integration for [Leap][leap.nvim]. By
+default, this plugin is integrated by Oil 8.
+
 #### `mini`
 
 Key-value table controlling [Mini][mini.nvim] modules that should be integrated
@@ -191,6 +196,7 @@ default, this plugin is integrated by Oil 8.
 [colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
 [gui]: https://neovim.io/doc/user/gui.html#gui
 [indent-blankline.nvim]: https://github.com/lukas-reineke/indent-blankline.nvim
+[leap.nvim]: https://github.com/ggandor/leap.nvim
 [mini.indentscope]: https://github.com/echasnovski/mini.indentscope
 [mini.nvim]: https://github.com/echasnovski/mini.nvim
 [neo-tree.nvim]: https://github.com/nvim-neo-tree/neo-tree.nvim
