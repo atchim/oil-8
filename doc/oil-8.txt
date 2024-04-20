@@ -55,6 +55,7 @@ argument for the `setup` function (|oil-8.setup()|).
 The supported plugins are listed below.
 
 - Indent Blankline (|indent-blankline.txt|)
+- Leap (|leap.txt|)
 - Mini (|mini.txt|)
   - Indentscope (|mini.indentscope|)
 - Neo-tree (|neo-tree.txt|)

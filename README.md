@@ -7,20 +7,19 @@ includes [Sopa de Mamaco][sopa.nvim], [Catppuccin][catppuccin.nvim] and
 
 ## ⚠️ Requirements
 
-Oil 8 only requires the [`background`][background] option set to `dark`.
+Oil 8 only requires the [`'background'`]['background'] option set to `dark`.
 
 ## ✨ Features
 
 - Dark theme with base colors based on the [Oil 6 color palette][oil-6].
 - Colors distributed throughout the spectrum.
 - Similar colors have similar meanings.
-- [Integration](#-integration) with [nvim-treesitter] and
-  [Neo-tree][neo-tree.nvim].
+- [Integration](#-integration) with [nvim-treesitter] and many other plugins.
 
 ## 🚀 Usage
 
 To load the color scheme with its default configuration, use the traditional
-[`:colorscheme`][colorscheme] command, as shown below.
+[`:colorscheme`][:colorscheme] command, as shown below.
 
 ```vim
 :colorscheme oil-8
@@ -55,6 +54,7 @@ passed as argument for the [`setup` function](#oil-8setupconfig).
 The supported plugins are listed below.
 
 - [Indent Blankline][indent-blankline.nvim]
+- [Leap][leap.nvim]
 - [Mini][mini.nvim]
   - [Indentscope][mini.indentscope]
 - [Neo-tree][neo-tree.nvim]
@@ -190,10 +190,10 @@ default, this plugin is integrated by Oil 8.
 | `light_deep_pink`     | `#e557cd` | `310 73 61` | `59  68 -33` |
 | `light_deep_pink`     | `#fc83c5` | `327 95 75` | `70  53 -13` |
 
-[background]: https://neovim.io/doc/user/options.html#'background'
+['background']: https://neovim.io/doc/user/options.html#'background'
 [bubblegum]: https://github.com/baskerville/bubblegum
 [catppuccin.nvim]: https://github.com/catppuccin/nvim
-[colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
+[:colorscheme]: https://neovim.io/doc/user/syntax.html#%3Acolorscheme
 [gui]: https://neovim.io/doc/user/gui.html#gui
 [indent-blankline.nvim]: https://github.com/lukas-reineke/indent-blankline.nvim
 [leap.nvim]: https://github.com/ggandor/leap.nvim
