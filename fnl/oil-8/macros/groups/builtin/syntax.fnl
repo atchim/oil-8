@@ -3,7 +3,7 @@
 { :groups
   #{:Boolean {:fg (color :macaroni-and-cheese)}
     :Character {:fg (color :medium-aquamarine)}
-    :Comment {:fg (color :ecru)}
+    :Comment {:fg (color :burnished-brown)}
     :Constant {:fg (color :big-foot-feet)}
     :Delimiter {:fg (color :jungle-green) :bold true}
     :Error {:fg (color :brink-pink) :bold true :reverse true}
