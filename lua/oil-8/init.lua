@@ -1,4 +1,4 @@
-local default_config = {integration = {illuminate = true, indent_blankline = true, leap = true, mini = {indentscope = true}, neo_tree = true, treesitter = true}, terminal_colors = false}
+local default_config = {custom_highlights = nil, integration = {illuminate = true, indent_blankline = true, leap = true, mini = {indentscope = true}, neo_tree = true, treesitter = true}, terminal_colors = false}
 local _local_1_ = vim
 local _local_2_ = _local_1_["api"]
 local hi = _local_2_["nvim_set_hl"]
@@ -70,10 +70,17 @@ local function setup(_3fconfig)
       for name_2_auto, args_3_auto in pairs({["@attribute.builtin"] = {fg = "#fe7c8d"}, ["@comment.documentation"] = {fg = "#bdab87"}, ["@comment.error"] = {bold = true, fg = "#f35e7c", reverse = true}, ["@comment.note"] = {bold = true, fg = "#58e9ca", reverse = true}, ["@comment.warning"] = {bold = true, fg = "#f38f5e", reverse = true}, ["@constant.builtin"] = {link = "Boolean"}, ["@constant.macro"] = {fg = "#fe7c8d"}, ["@constructor"] = {link = "@punctuation"}, ["@function.macro"] = {fg = "#f35e7c"}, ["@keyword.conditional.ternary"] = {link = "Operator"}, ["@keyword.directive"] = {link = "Preproc"}, ["@keyword.export"] = {link = "@keyword.return"}, ["@keyword.operator"] = {link = "Operator"}, ["@keyword.return"] = {fg = "#fc83c5"}, ["@markup.link"] = {fg = "#54b7e8", underline = true}, ["@markup.link.label"] = {fg = "#a4b6fe", underline = true}, ["@markup.link.url"] = {fg = "#84cfdd", underline = true}, ["@markup.link.vimdoc"] = {fg = "#fc83c5", underline = true}, ["@markup.list"] = {link = "Delimiter"}, ["@markup.list.checked"] = {fg = "#72db5e"}, ["@markup.list.unchecked"] = {fg = "#bdab87"}, ["@markup.quote"] = {fg = "#6ceaa7"}, ["@markup.raw"] = {fg = "#fab98a"}, ["@string.documentation"] = {fg = "#6ceaa7"}, ["@string.regex"] = {fg = "#6ceaa7"}, ["@string.regexp"] = {link = "@string.regex"}, ["@string.special.url"] = {fg = "#58e9ca", underline = true}, ["@tag"] = {link = "Type"}, ["@tag.attribute"] = {link = "@variable.member"}, ["@tag.builtin"] = {link = "@type.builtin"}, ["@tag.delimiter"] = {link = "htmlTag"}, ["@type.builtin"] = {fg = "#dd9ffe"}, ["@variable"] = {fg = "#a4b6fe"}, ["@variable.builtin"] = {fg = "#84cfdd"}, ["@variable.member"] = {link = "Identifier"}}) do
         hi(0, name_2_auto, args_3_auto)
       end
-      return nil
     else
-      return nil
     end
+  else
+  end
+  if ("function" == type(config.custom_highlights)) then
+    local palette = require("oil-8.palette")
+    local groups = config.custom_highlights(palette)
+    for name_2_auto, args_3_auto in pairs(groups) do
+      hi(0, name_2_auto, args_3_auto)
+    end
+    return nil
   else
     return nil
   end

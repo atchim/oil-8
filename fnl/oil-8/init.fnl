@@ -11,14 +11,15 @@
   {: or-default} :soupmacs.soupmacs)
 
 (local default-config
-  { :terminal_colors false
+  { :custom_highlights nil
     :integration
     { :illuminate true
       :indent_blankline true
       :leap true
       :mini {:indentscope true}
       :neo_tree true
-      :treesitter true}})
+      :treesitter true}
+    :terminal_colors false})
 
 (local
   {:api {:nvim_set_hl hi} :fn fn* : g : opt :tbl_deep_extend tbl-deep-extend}
@@ -47,6 +48,11 @@
         (when config.integration.mini.indentscope
           (hi-groups (mini-indentscope-groups))))
       (when config.integration.neo_tree (hi-groups (neo-tree-groups)))
-      (when config.integration.treesitter (hi-groups (treesitter-groups))))))
+      (when config.integration.treesitter (hi-groups (treesitter-groups))))
+    (when (= :function (type config.custom_highlights))
+      (let
+        [ palette (require :oil-8.palette)
+          groups (config.custom_highlights palette)]
+        (hi-groups groups)))))
 
 {: setup}

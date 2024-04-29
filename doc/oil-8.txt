@@ -39,9 +39,18 @@ To load the color scheme with custom configuration, use the `setup` function
     -- By default, most plugins have integration enabled. To disable all plugin
     -- integration, set the `integration` field to `false`.
     integration = {
-      neo_tree = true, -- Integration for Neo-tree.
-      treesitter = true, -- Integration for nvim-treesitter.
-    }
+      neo_tree = false, -- Disables integration for Neo-tree.
+      treesitter = true, -- Ensures integration for nvim-treesitter.
+      mini = false, -- Disables all integration for Mini plugins.
+    },
+
+    -- Set or override highlight groups.
+    custom_highlights = function(palette)
+      return {
+        Conditional = {fg = palette.persian_pink},
+        MyHighlightGroup = {fg = palette.inchworm, bold = true},
+      }
+    end,
   }
 <
 ===============================================================================
@@ -96,10 +105,25 @@ Oil 8 is configured via the configuration table passed as argument to the
 `setup` function (|oil-8.setup()|). The fields of that table are listed and
 explained below.
 
-`terminal_colors`                                *oil-8-config.terminal_colors*
-  Boolean controlling whether Oil 8 should set terminal color variables
-  (see |terminal-config|). By default, it's set to `false`.
+`custom_highlights`                            *oil-8-config.custom_highlights*
+  Function that takes a palette table (|oil-8.palette|) and returns a key-value
+  table where each key stands for the name of the group to be highlighted, and
+  its corresponding value is a table as specified for the {val} parameter of
+  |nvim_set_hl()|.
 
+  This function may be used for setting other highlight groups, or for
+  overriding existing ones previously set by Oil 8. The following code snippet
+  exemplifies how to use it.
+>lua
+  require'oil-8'.setup{
+    custom_highlights = function(palette)
+      return {
+        NeoTreeWinSeparator = {link = 'WinSeparator'}
+        WinSeparator = {fg = palette.eerie_black, bg = palette.dark_gunmetal},
+      }
+    end,
+  }
+<
 `integration`                                        *oil-8-config.integration*
   Key-value table controlling which (and how) plugins should be integrated by
   Oil 8. Each key represents the plugin name in snake case, with the
@@ -143,6 +167,10 @@ explained below.
   `treesitter`                            *oil-8-config.integration.treesitter*
     Boolean controlling whether to enable integration for nvim-treesitter
     (|nvim-treesitter|). By default, this plugin is integrated by Oil 8.
+
+`terminal_colors`                                *oil-8-config.terminal_colors*
+  Boolean controlling whether Oil 8 should set terminal color variables
+  (see |terminal-config|). By default, it's set to `false`.
 
 ===============================================================================
 PALETTE                                                         *oil-8-palette*
