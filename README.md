@@ -38,9 +38,18 @@ require'oil-8'.setup{
   -- By default, most plugins have integration enabled. To disable all plugin
   -- integration, set the `integration` field to `false`.
   integration = {
-    neo_tree = true, -- Integration for Neo-tree.
-    treesitter = true, -- Integration for nvim-treesitter.
-  }
+    neo_tree = false, -- Disables integration for Neo-tree.
+    treesitter = true, -- Ensures integration for nvim-treesitter.
+    mini = false, -- Disables all integration for Mini plugins.
+  },
+
+  -- Set or override highlight groups.
+  custom_highlights = function(palette)
+    return {
+      Conditional = {fg = palette.persian_pink},
+      MyHighlightGroup = {fg = palette.inchworm, bold = true},
+    }
+  end,
 }
 ```
 
@@ -92,10 +101,27 @@ Oil 8 is configured via the configuration table passed as argument to the
 [`setup` function](#oil-8setupconfig). The fields of that table are listed and
 explained below.
 
-### `terminal_colors`
+### `custom_highlights`
 
-Boolean controlling whether Oil 8 should set
-[terminal color variables][terminal-config]. By default, it's set to `false`.
+Function that takes a [palette table](#oil-8palette) and returns a key-value
+table where each key stands for the name of the group to be highlighted, and
+its corresponding value is a table as specified for the `val` parameter of
+[nvim_set_hl()].
+
+This function may be used for setting other highlight groups, or for
+overriding existing ones previously set by Oil 8. The following code snippet
+exemplifies how to use it.
+
+```lua
+require'oil-8'.setup{
+  custom_highlights = function(palette)
+    return {
+      NeoTreeWinSeparator = {link = 'WinSeparator'}
+      WinSeparator = {fg = palette.eerie_black, bg = palette.dark_gunmetal},
+    }
+  end,
+}
+```
 
 ### `integration`
 
@@ -150,6 +176,11 @@ Boolean controlling whether to enable integration for
 
 Boolean controlling whether to enable integration for [nvim-treesitter]. By
 default, this plugin is integrated by Oil 8.
+
+### `terminal_colors`
+
+Boolean controlling whether Oil 8 should set
+[terminal color variables][terminal-config]. By default, it's set to `false`.
 
 ## 🎨 Palette
 
@@ -207,6 +238,7 @@ default, this plugin is integrated by Oil 8.
 [mini.nvim]: https://github.com/echasnovski/mini.nvim
 [neo-tree.nvim]: https://github.com/nvim-neo-tree/neo-tree.nvim
 [nvim]: https://neovim.io
+[nvim_set_hl()]: https://neovim.io/doc/user/api.html#nvim_set_hl()
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 [oil-6]: https://lospec.com/palette-list/oil-6
 [sopa.nvim]: https://github.com/atchim/sopa.nvim
